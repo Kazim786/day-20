@@ -5,7 +5,14 @@ python = Turtle()
 python.color("white")
 python.shape("square")
 python.pencolor("white")
+python.speed(6)
 
+
+def move_forward(): 
+    python.setheading(0)
+    python.forward(30)
+
+python.onkey(move_forward, "w")
 #might have to use forloop to add more squares 
 # or a while loop with an if statement 
 # so it only adds squares when the snake eats
