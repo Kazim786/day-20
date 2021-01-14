@@ -33,11 +33,21 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    for boxes in box:
-        boxes.forward(20)
+    time.sleep(0.1)
+    for boxes in range(len(box) - 1, 0, -1):
+        new_x = box[boxes - 1].xcor()
+        new_y = box[boxes - 1].ycor()
+        box[boxes].goto(new_x, new_y)
+    
+    box[0].forward(20)
+    box[0].left(90)
+    
+    
+    #not using this anymore
+    # for boxes in box:
+    #     boxes.forward(20)
         
-        time.sleep(1)
-# print(box)
+
 
 
 # def move_forward(): 
