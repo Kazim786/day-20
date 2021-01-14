@@ -11,6 +11,7 @@ box = []
 
 x_pos = [0, -20, -40]
 
+#If you want to make multiple versions of a thing just use a for loop
 for boxes in range (0, 3):
     python = Turtle()
     python.color("white")
@@ -18,7 +19,17 @@ for boxes in range (0, 3):
     python.pencolor("white")
     python.speed(6)
     python.goto(x = x_pos[boxes], y= 0)
+    python.penup()
+    
+
     box.append(boxes)
+
+game_is_on = True
+
+
+while game_is_on:
+    for boxes in box:
+        boxes.forward(30)
 
 # print(box)
 
@@ -28,6 +39,7 @@ for boxes in range (0, 3):
 #     python.forward(30)
 
 # python.onkey(move_forward, "w")
+
 #might have to use forloop to add more squares 
 # or a while loop with an if statement 
 # so it only adds squares when the snake eats
@@ -36,9 +48,5 @@ for boxes in range (0, 3):
 #ycor() 
 
 
-# screen = Screen()
-# screen.setup(width=600, height=600)
-# screen.title("Python Game")
-# screen.bgcolor("black")
-# screen.listen()
+
 screen.exitonclick()
