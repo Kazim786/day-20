@@ -9,7 +9,7 @@ screen.listen()
 #So far im doing it by myself
 box = []
 
-x_pos = [0, 3, 9]
+x_pos = [0, -20, -40]
 
 for boxes in range (0, 3):
     python = Turtle()
