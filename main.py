@@ -1,9 +1,12 @@
 from turtle import Turtle, Screen 
+import time
+
 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.title("Python Game")
 screen.bgcolor("black")
+screen.tracer(0) #turns tracer off
 screen.listen()
 
 #So far im doing it by myself
@@ -23,13 +26,17 @@ for boxes in range (0, 3):
     
     box.append(python)
 
+# screen.update()
+
 game_is_on = True
 
 
 while game_is_on:
+    screen.update()
     for boxes in box:
         boxes.forward(20)
-
+        
+        time.sleep(1)
 # print(box)
 
 
