@@ -8,18 +8,24 @@ screen.listen()
 
 #So far im doing it by myself
 box = []
-for boxes in range (0, 4):
+
+x_pos = [0, 3, 9]
+
+for boxes in range (0, 3):
     python = Turtle()
     python.color("white")
     python.shape("square")
     python.pencolor("white")
     python.speed(6)
-    python.goto(0, 0)
+    python.goto(x = x_pos[boxes], y= 0)
     box.append(boxes)
 
-def move_forward(): 
-    python.setheading(0)
-    python.forward(30)
+# print(box)
+
+
+# def move_forward(): 
+#     python.setheading(0)
+#     python.forward(30)
 
 # python.onkey(move_forward, "w")
 #might have to use forloop to add more squares 
