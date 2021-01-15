@@ -8,12 +8,19 @@ screen.setup(width=600, height=600)
 screen.title("Python Game")
 screen.bgcolor("black")
 screen.tracer(0) #turns tracer off
-screen.listen()
+
 
 
 
 
 snake = Snake()
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
 
 #So far im doing it by myself
 box = []
