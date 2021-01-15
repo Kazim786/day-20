@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen 
 import time
+from snake import Snake 
 
 
 screen = Screen()
@@ -9,44 +10,73 @@ screen.bgcolor("black")
 screen.tracer(0) #turns tracer off
 screen.listen()
 
+
+
+
+snake = Snake()
+
 #So far im doing it by myself
 box = []
 
 x_pos = [0, -20, -40]
 
 #If you want to make multiple versions of a thing just use a for loop
-for boxes in range (0, 3):
-    python = Turtle()
-    python.color("white")
-    python.shape("square")
-    python.pencolor("white")
-    python.penup()
-    python.speed(6)
-    python.goto(x = x_pos[boxes], y= 0)
+# for boxes in range (0, 3):
+#     python = Turtle()
+#     python.color("white")
+#     python.shape("square")
+#     python.pencolor("white")
+#     python.penup()
+#     python.speed(6)
+#     python.goto(x = x_pos[boxes], y= 0)
     
-    box.append(python)
+#     box.append(python)
 
-# screen.update()
+
+
+
 
 game_is_on = True
-
 
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-    for boxes in range(len(box) - 1, 0, -1):
-        new_x = box[boxes - 1].xcor()
-        new_y = box[boxes - 1].ycor()
-        box[boxes].goto(new_x, new_y)
+
+    snake.move()
+
+
+
+
+
+#we have refactored our code so this has been commented out
+#     for boxes in range(len(box) - 1, 0, -1):
+#         new_x = box[boxes - 1].xcor()
+#         new_y = box[boxes - 1].ycor()
+#         box[boxes].goto(new_x, new_y)
+        
+#     box[0].forward(20)
+#     box[0].left(90)
     
-    box[0].forward(20)
-    box[0].left(90)
-    
+    # snake_obj.move()
     
     #not using this anymore
     # for boxes in box:
     #     boxes.forward(20)
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
