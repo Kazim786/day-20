@@ -5,11 +5,17 @@ from turtle import Turtle, Screen
 STARTING_POS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
 class Snake:
 
     def __init__(self):
         self.segments = []
         self.create_snake()
+
 
     def create_snake(self):
         for position in STARTING_POS:
@@ -38,18 +44,18 @@ class Snake:
 
     def up(self):
 
-        self.segments[0].setheading(90)
+        self.segments[0].setheading(UP)
         self.segments[0].forward(MOVE_DISTANCE)
 
 
     def right(self):
-        self.segments[0].setheading(0)
+        self.segments[0].setheading(RIGHT)
         self.segments[0].forward(MOVE_DISTANCE)
     def left(self):
-        self.segments[0].setheading(180)
+        self.segments[0].setheading(LEFT)
         self.segments[0].forward(MOVE_DISTANCE)
 
-    def down(self):
+    def down(DOWN):
         self.segments[0].setheading(270)
         self.segments[0].forward(MOVE_DISTANCE)
 
