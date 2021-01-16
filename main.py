@@ -58,6 +58,7 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         food.refresh()
 
+    # if snake.head.distance(wall) #for wall
 
 
 #we have refactored our code so this has been commented out
