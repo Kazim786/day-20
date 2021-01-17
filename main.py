@@ -68,7 +68,7 @@ while game_is_on:
     if snake.head.distance(snake.tail) <= 1: #THIS IS WORKING! DID IT BY MYSELF
         print("Game over") 
         scoreboard.score = 0
-        scoreboard.write("GAME OVER", True)
+        scoreboard.write("GAME OVER", True) #This is working too
 
     # if snake.head.distance(wall) #for wall
 
