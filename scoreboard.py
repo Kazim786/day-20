@@ -1,7 +1,7 @@
 from turtle import Turtle 
 
-class Scoreboard(Turtle):
-    def __init__(self):
+class Scoreboard(Turtle): #Inheriting from Turtle
+    def __init__(self): #Attributes go here and method calls
         super().__init__()
         self.score = 0
         self.write(f"Score = {self.score}", True, align= "center")
