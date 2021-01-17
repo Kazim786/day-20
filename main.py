@@ -62,6 +62,12 @@ while game_is_on:
         #Most likely going to put scoreboard updating code here too
         scoreboard.score += 1
         print(scoreboard.score)
+
+
+#If the tail and head collide
+    if snake.head.distance(snake.segments[len(snake.segments) - 1]) < 15:
+        print("Game over")
+
     # if snake.head.distance(wall) #for wall
 
 
