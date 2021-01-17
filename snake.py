@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 
 
 
-STARTING_POS = [(0, 0), (-20, 0), (-40, 0)]
+STARTING_POS = [(0, 0), (-20, 0), (-40, 0), (-60, 0), (-80, 0), (-100, 0), (-120, 0), (-140, 0), (-160, 0), (-180, 0), (-200, 0), (-220, 0), (-240, 0), (-260, 0), (-280, 0), (-300, 0), (-320, 0), (-340, 0), (-360, 0), (-380, 0), (-400, 0) ]
 MOVE_DISTANCE = 20
 
 UP = 90
@@ -16,7 +16,7 @@ class Snake:
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
-
+        self.tail = self.segments[len(self.segments) - 1] #Did this by myself
 
     def create_snake(self):
         for position in STARTING_POS:
