@@ -69,6 +69,8 @@ while game_is_on:
         print("Game over") 
         scoreboard.score = 0
         scoreboard.clear() #Did by myself
+        scoreboard.goto(0, 250)
+        scoreboard.penup()
         scoreboard.write("GAME OVER", True, font= ("Arial", 24, "normal")) #This is working too
 
     # if snake.head.distance(wall) #for wall
