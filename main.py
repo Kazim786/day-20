@@ -61,25 +61,34 @@ while game_is_on:
         food.refresh()
         #Most likely going to put scoreboard updating code here too
         #Did it by myself
-        scoreboard.goto(0, 250)
-        scoreboard.clear()
-        scoreboard.score += 1
-        scoreboard.write(f"Score: {scoreboard.score}", True, font= ("Arial", 24, "normal")) #This is working too
+        # scoreboard.goto(0, 250)
+        # scoreboard.clear()
+        # scoreboard.score += 1
+        # scoreboard.write(f"Score: {scoreboard.score}", True, font= ("Arial", 24, "normal")) #This is working too
+
+        scoreboard.increased_score()
+        
         
         print(scoreboard.score)
 
 
 #If the tail and head collide
     if snake.head.distance(snake.tail) <= 1: #THIS IS WORKING! DID IT BY MYSELF
-        print("Game over") 
-        scoreboard.score = 0
-        scoreboard.clear() #Did by myself
-        scoreboard.goto(0, 250)
-        scoreboard.penup()
-        scoreboard.write("GAME OVER", True, font= ("Arial", 24, "normal")) #This is working too
+        # print("Game over") 
+        # scoreboard.score = 0
+        # scoreboard.clear() #Did by myself
+        # scoreboard.goto(0, 250)
+        # scoreboard.penup()
+        # scoreboard.write("GAME OVER", True, font= ("Arial", 24, "normal")) #This is working too
+        # game_is_on = False
+        scoreboard.tailcollision()
 
-    # if snake.head.distance(wall) #for wall
+    
+    # wall collission
 
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_is_on = False
+        scoreboard.gameover()
 
 #we have refactored our code so this has been commented out
 #     for boxes in range(len(box) - 1, 0, -1):
