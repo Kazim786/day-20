@@ -18,6 +18,7 @@ class Scoreboard(Turtle): #Inheriting from Turtle
         
     def gameover(self):
         self.goto(0,0)
+        self.clear()
         self.write("Game over", align= "center", font= ("Arial", 24, "normal"))
 
     def increased_score(self):
@@ -33,4 +34,4 @@ class Scoreboard(Turtle): #Inheriting from Turtle
         self.goto(0, 250)
         self.penup()
         self.write("GAME OVER", True, font= ("Arial", 24, "normal")) #This is working too
-        game_is_on = False
+       

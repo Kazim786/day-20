@@ -80,9 +80,9 @@ while game_is_on:
         # scoreboard.goto(0, 250)
         # scoreboard.penup()
         # scoreboard.write("GAME OVER", True, font= ("Arial", 24, "normal")) #This is working too
-        # game_is_on = False
+        game_is_on = False
         scoreboard.tailcollision()
-
+        
     
     # wall collission
 
